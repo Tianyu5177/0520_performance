@@ -12,6 +12,36 @@
 <button id="btn4">清空数据</button>
 
 <script type="text/javascript">
+  
+  let btn1 = document.getElementById('btn1')
+  let btn2 = document.getElementById('btn2')
+  let btn3 = document.getElementById('btn3')
+  let btn4 = document.getElementById('btn4')
+  
+  let p = {name:'kobe',age:18}
+  
+  //保存数据
+  btn1.onclick = function () {
+    sessionStorage.setItem('a','b')
+    sessionStorage.setItem('person',JSON.stringify(p))
+  }
+  
+  //读取数据
+  btn2.onclick = function () {
+    console.log(sessionStorage.getItem('person'));
+    console.log(sessionStorage.getItem('a'));
+  }
+  
+  //删除
+  btn3.onclick = function () {
+    sessionStorage.removeItem('person')
+    sessionStorage.removeItem('a')
+  }
+  
+  //清空
+  btn4.onclick = function () {
+    sessionStorage.clear()
+  }
 
 </script>
 </body>
