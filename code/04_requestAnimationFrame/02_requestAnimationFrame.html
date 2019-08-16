@@ -21,12 +21,25 @@
   </style>
 </head>
 <body>
-
 <div id="test">
 
 </div>
 <!--requestAnimationFrame动画.html-->
 <script type="text/javascript">
+
+  let i = 0
+  let id
+  requestAnimationFrame(move)
+  
+  function move() {
+    i = i+1
+    document.getElementById('test').style.transform = `translateX(${i}px)`
+    id = requestAnimationFrame(move)
+  }
+  
+  setTimeout(()=>{
+      cancelAnimationFrame(id)
+  },2000)
   
 
 </script>
