@@ -6472,11 +6472,13 @@
     position: absolute;bottom: 0;
     }
     </style>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="">
 	</head>
 	<body>
     <!--
       1.style标签中的样式由html解析器进行解析。
-      2.页面style标签写的内部样式是异步解析的。
+      2.页面style标签写的内部样式是异步解析的(容易闪屏)。
       3.浏览器加载资源是异步的。
     -->
 		<img src="img/01.jpg"/>
