@@ -17,6 +17,21 @@
   *   应用：搜索时等用户完整输入内容后再发送查询请求。
   * */
   
+  let input = document.getElementById('user_input')
+  let id
+  input.onkeyup = function () {
+    if(id){
+      clearTimeout(id)
+    }
+    id = setTimeout(()=>{
+      ajax(input.value)
+    },200)
+  }
+  
+  function ajax(data) {
+    console.log(`发送请求了--------${data}`)
+  }
+  
   
 </script>
 </body>
